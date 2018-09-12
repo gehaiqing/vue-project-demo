@@ -1,0 +1,46 @@
+{
+  "name": "vue-project-demo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build:test": "cross-env FE_ENV=test vue-cli-service build",
+    "build:online": "cross-env FE_ENV=online vue-cli-service build",
+    "deploy:test": "cross-env FE_ENV=test node deploy/index",
+    "deploy:online": "cross-env FE_ENV=online node deploy/index",
+    "release:test": "npm run build:test && npm run deploy:test",
+    "release:online": "npm run build:online && npm run deploy:online",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "vue": "^2.5.17",
+    "vue-class-component": "^6.0.0",
+    "vue-property-decorator": "^7.0.0",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.1",
+    "@vue/cli-plugin-eslint": "^3.0.1",
+    "@vue/cli-plugin-typescript": "^3.0.1",
+    "@vue/cli-service": "^3.0.1",
+    "@vue/eslint-config-standard": "^3.0.1",
+    "@vue/eslint-config-typescript": "^3.0.1",
+    "colors": "^1.3.2",
+    "cross-env": "^5.2.0",
+    "inquirer": "^6.2.0",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "mini-css-extract-plugin": "^0.4.2",
+    "node-sass": "^4.9.3",
+    "prompts": "^1.1.0",
+    "sass-loader": "^7.1.0",
+    "stylelint": "^9.5.0",
+    "stylelint-config-standard": "^18.2.0",
+    "typescript": "^3.0.0",
+    "vinyl-fs": "^3.0.3",
+    "vinyl-ftp": "^0.6.1",
+    "vue-template-compiler": "^2.5.17"
+  }
+}
